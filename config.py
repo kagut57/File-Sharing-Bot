@@ -28,7 +28,7 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "5591954930"))
 PORT = os.environ.get("PORT", "8080")
 
 #delay
-DELAY = 180
+DELAY = 600
 
 #Database 
 DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://f2l:f2l@cluster0.fjjge1y.mongodb.net/?retryWrites=true&w=majority")
