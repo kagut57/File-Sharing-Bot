@@ -6,6 +6,7 @@
     "file",
     "sharing"
   ],
+  "stack": "container",
   "repository": "https://github.com/CodeXBotz/File-Sharing-Bot",
   "logo": "https://ibb.co/FgPVtzw",
   "env": {
