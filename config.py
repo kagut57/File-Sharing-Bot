@@ -32,7 +32,7 @@ DELAY = 180
 
 #Database 
 DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://f2l:f2l@cluster0.fjjge1y.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME = os.environ.get("DATABASE_NAME", "Desi Maal")
+DB_NAME = os.environ.get("DATABASE_NAME", "Desi-Maal")
 
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "1001594091318"))
