@@ -82,7 +82,7 @@ async def start_command(client: Client, message: Message):
 
             try:
                 sent_msg = await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
-                await asyncio.sleep(0.5)
+                await asyncio.sleep(3)
                 asyncio.create_task(delete_message_after_delay(client, message.from_user.id, sent_msg.id, DELAY))
             except FloodWait as e:
                 await asyncio.sleep(e.x)
@@ -90,7 +90,7 @@ async def start_command(client: Client, message: Message):
                 asyncio.create_task(delete_message_after_delay(client, message.from_user.id, sent_msg.id, DELAY))
             except:
                 pass
-        n_msg = await message.reply("‼️ 𝖡𝖾𝖿𝗈𝗋𝖾 𝖽𝗈𝗐𝗇𝗅𝗈𝖺𝖽𝗂𝗇𝗀 𝗍𝗁𝖾 𝖿𝗂𝗅𝖾𝗌, 𝗉𝗅𝖾𝖺𝗌𝖾 𝗍𝗋𝖺𝗇𝗌𝖿𝖾𝗋 𝗍𝗁𝖾𝗆 𝗍𝗈 𝖺𝗇𝗈𝗍𝗁𝖾𝗋 𝗅𝗈𝖼𝖺𝗍𝗂𝗈𝗇 𝗈𝗋 𝗌𝖺𝗏𝖾 𝗍𝗁𝖾𝗆 𝗂𝗇 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌, 𝖳𝗁𝖾𝗒 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝗂𝗇 10 𝗆𝗂𝗇𝗎𝗍𝖾𝗌.")
+        n_msg = await message.reply("‼️ 𝖡𝖾𝖿𝗈𝗋𝖾 𝖽𝗈𝗐𝗇𝗅𝗈𝖺𝖽𝗂𝗇𝗀 𝗍𝗁𝖾 𝖿𝗂𝗅𝖾𝗌, 𝗉𝗅𝖾𝖺𝗌𝖾 𝗍𝗋𝖺𝗇𝗌𝖿𝖾𝗋 𝗍𝗁𝖾𝗆 𝗍𝗈 𝖺𝗇𝗈𝗍𝗁𝖾𝗋 𝗅𝗈𝖼𝖺𝗍𝗂𝗈𝗇 𝗈𝗋 𝗌𝖺𝗏𝖾 𝗍𝗁𝖾𝗆 𝗂𝗇 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌, 𝖳𝗁𝖾𝗒 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝗂𝗇 30 𝗆𝗂𝗇𝗎𝗍𝖾𝗌.")
         await asyncio.sleep(60)
         await n_msg.delete()
         return
